@@ -13,13 +13,55 @@
   --dairy: #fcfcfc;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--white);
   color: var(--slate);
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* header */
+
+.header-wrapper,
+.nav,
+.nav .list,
+.address-header .list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  height: 72px;
+}
+
+header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
 .nav .logo {
   color: var(--iris);
 }
@@ -81,22 +123,46 @@ body {
 }
 
 /* main */
+
+/*index*/
+
+.hero {
+  padding-top: 120px;
+  width: 1158px;
+  height: 600px;
+  background-color: var(--navyblue);
+}
+
 .mainheader {
+  max-width: 496px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--white);
   font-size: 56px;
+  font-weight: 700;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
 }
 
 button {
-  color: var(--iris);
+  display: block;
+  height: 56px;
+  min-width: 169px;
+  margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 32px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: var(--iris);
+  color: var(--white);
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   font-family: 'Roboto', sans-serif;
-  background-color: #4d5ae5;
   cursor: pointer;
 }
 
@@ -105,29 +171,17 @@ button:focus {
   background-color: #404bbf;
 }
 
+.traits .list {
+  margin-top: 120px;
+  display: flex;
+  gap: 8px;
+  min-width: 1128px;
+  width: calc((100% - 24px) / 4);
+}
+
 .active-button {
   background-color: #4d5ae5;
   color: var(--white);
-}
-
-.button-portfolio {
-  color: var(--iris);
-  background-color: var(--cloud);
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-
-.button-portfolio:hover,
-.button-portfolio:focus {
-  color: #ffffff;
-  background-color: #404bbf;
-}
-
-.dark-backgrnd {
-  background-color: var(--navyblue);
 }
 
 .list {
@@ -167,15 +221,35 @@ button:focus {
   color: var(--grey);
 }
 
+.what-are-we {
+  margin-top: 120px;
+  width: 1140px;
+}
+
+.what-are-we .list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .team-section {
   background-color: var(--cloud);
+  max-width: 1158px;
+}
+
+.team-section .list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .team-card {
+  width: calc((100% - 72px) / 4);
   background-color: #ffffff;
 }
 
 .team-name {
+  text-align: center;
   color: var(--grey);
   font-weight: 500;
   font-size: 20px;
@@ -184,11 +258,70 @@ button:focus {
 }
 
 .team-job {
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+}
+
+/*portfolio*/
+.section-portfolio {
+  padding: 96px 0 120px 0;
+}
+
+.button-portfolio {
+  color: var(--iris);
+  background-color: var(--cloud);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--cornflower);
+}
+
+.button-portfolio:hover,
+.button-portfolio:focus {
+  color: #ffffff;
+  background-color: #404bbf;
+}
+
+.button-set {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+
+.button-set li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.button-set li:last-child {
+  margin-right: 0;
+}
+
+.section-portfolio .list {
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.portolio-card {
+  width: calc((100% - 16px) / 3);
+  gap: 8px;
+  
+
+  border: 1px solid var(--cornflower);
+}
+
+.list .portolio-card {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .app-name {
@@ -198,6 +331,7 @@ button:focus {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--grey);
+  text-align: left;
 }
 
 .functionality {
@@ -206,12 +340,15 @@ button:focus {
   letter-spacing: 0.02em;
   line-height: 1.5;
   color: var(--slate);
+  text-align: left;
 }
 
 /* footer */
 .footer {
+  width: 1440px;
+  height: 312px;
   color: var(--cloud);
-  background-color: var(--grey);
+  background-color: var(--navyblue);
   font-size: 16px;
 }
 
