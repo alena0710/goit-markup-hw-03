@@ -64,6 +64,7 @@ header {
 
 .nav .logo {
   color: var(--iris);
+  margin-right: 76px;
 }
 
 .logo {
@@ -85,6 +86,7 @@ header {
 
 .nav-link.link {
   color: var(--navyblue);
+  padding: 24px 0;
 }
 
 .nav-link.link:hover,
@@ -118,6 +120,11 @@ header {
   color: var(--slate);
 }
 
+.menu-nav,
+.address-header .list {
+  gap: 40px;
+}
+
 .list {
   list-style-type: none;
 }
@@ -127,7 +134,7 @@ header {
 /*index*/
 
 .hero {
-  padding-top: 120px;
+  padding: 188px 0;
   width: 1158px;
   height: 600px;
   background-color: var(--navyblue);
@@ -171,17 +178,25 @@ button:focus {
   background-color: #404bbf;
 }
 
+.traits {
+  padding: 120px 0;
+}
+
 .traits .list {
-  margin-top: 120px;
   display: flex;
-  gap: 8px;
+  gap: 24px;
   min-width: 1128px;
   width: calc((100% - 24px) / 4);
+}
+
+.traits-specs {
+  width: calc((100% - 72px) / 4); 
 }
 
 .active-button {
   background-color: #4d5ae5;
   color: var(--white);
+  border: none;
 }
 
 .list {
@@ -189,6 +204,7 @@ button:focus {
 }
 
 .headers {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -204,52 +220,63 @@ button:focus {
 }
 
 .header-doing {
+  margin-bottom: 72px;
   letter-spacing: 0.02em;
   color: var(--grey);
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
-}
-
-.header-team {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--grey);
 }
 
 .what-are-we {
-  margin-top: 120px;
-  width: 1140px;
+  padding-bottom: 120px;
+
 }
 
 .what-are-we .list {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 24px;
+}
+
+.images-we-do {
+  width: calc((100% - 48px) / 3); 
+}
+
+.header-team {
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--grey);
 }
 
 .team-section {
+  padding: 120px 0;
   background-color: var(--cloud);
-  max-width: 1158px;
 }
 
 .team-section .list {
   display: flex;
-  flex-direction: row;
   gap: 24px;
 }
 
 .team-card {
   width: calc((100% - 72px) / 4);
+border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
+}
+
+.team-occupation {
+  padding: 32px 0;
 }
 
 .team-name {
   text-align: center;
+  margin-bottom: 8px;
   color: var(--grey);
   font-weight: 500;
   font-size: 20px;
@@ -268,7 +295,8 @@ button:focus {
 
 /*portfolio*/
 .section-portfolio {
-  padding: 96px 0 120px 0;
+  padding-top: 96px; 
+  padding-bottom: 120px; 
 }
 
 .button-portfolio {
@@ -280,20 +308,22 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border: 1px solid var(--cornflower);
+  padding: 12px 24px;
+  border-radius: 4px;
 }
 
 .button-portfolio:hover,
 .button-portfolio:focus {
   color: #ffffff;
   background-color: #404bbf;
+  border: 1px solid transparent;
 }
 
 .button-set {
   display: flex;
   justify-content: center;
   gap: 24px;
-  border-radius: 4px;
-  padding: 12px 24px;
+  margin-bottom: 72px;
 }
 
 .button-set li:not(:last-child) {
@@ -304,24 +334,23 @@ button:focus {
   margin-right: 0;
 }
 
-.section-portfolio .list {
+.portfolio-cards {
 display: flex;
 flex-wrap: wrap;
+column-gap: 24px;
+row-gap: 48px; 
 
 }
 
 .portolio-card {
-  width: calc((100% - 16px) / 3);
-  gap: 8px;
-  
-
+  width: calc((100% - 48px) / 3);
   border: 1px solid var(--cornflower);
 }
 
-.list .portolio-card {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
+.port-specs {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .app-name {
@@ -332,6 +361,7 @@ flex-wrap: wrap;
   letter-spacing: 0.02em;
   color: var(--grey);
   text-align: left;
+  margin-bottom: 8px;
 }
 
 .functionality {
@@ -345,8 +375,8 @@ flex-wrap: wrap;
 
 /* footer */
 .footer {
-  width: 1440px;
-  height: 312px;
+  padding: 100px 0;
+
   color: var(--cloud);
   background-color: var(--navyblue);
   font-size: 16px;
@@ -360,14 +390,19 @@ flex-wrap: wrap;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
+    display: inline-block; 
+  margin-bottom: 16px;
 }
+
 
 .logo-down {
   color: #f4f4fd;
 }
 
 .footer-text {
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+    line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--cloud);
 }
