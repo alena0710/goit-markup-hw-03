@@ -294,10 +294,6 @@ border-radius: 0px 0px 4px 4px;
 }
 
 /*portfolio*/
-.section-portfolio {
-  padding-top: 96px; 
-  padding-bottom: 120px; 
-}
 
 .button-portfolio {
   color: var(--iris);
@@ -405,4 +401,9 @@ row-gap: 48px;
     line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud);
+}
+
+.footer .container {
+  margin-left: 156px;
+  
 }
