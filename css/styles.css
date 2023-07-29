@@ -30,12 +30,11 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--white);
   color: var(--slate);
-  max-width: 1158px;
-  margin: 0 auto;
 }
 
 .container {
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -48,6 +47,7 @@ img {
 
 .header {
   border-bottom: 1px solid var(--cornflower);
+  height: 72px;
 }
 
 .header,
@@ -138,7 +138,6 @@ img {
 
 .hero {
   padding: 188px 0;
-  width: 1158px;
   height: 600px;
   background-color: var(--navyblue);
 }
@@ -294,6 +293,7 @@ button:focus {
 .section-portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
+  
 }
 
 .list.button-set {
@@ -301,6 +301,9 @@ button:focus {
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
+  margin-top: 0;
+padding-left: 427px;
+  padding-right: 427px;
 }
 
 .button-portfolio {
@@ -328,10 +331,14 @@ button:focus {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+    margin-top: 0;
+  padding-left: 0;
+  
 }
 
 .list .portolio-card {
   width: calc((100% - 48px) / 3);
+
 }
 
 .port-specs {
