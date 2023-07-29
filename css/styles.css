@@ -42,27 +42,32 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
 /* header */
 
-.header-wrapper,
-.nav,
-.nav .list,
-.address-header .list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
-  height: 72px;
-}
-
-header {
+.header {
   border-bottom: 1px solid var(--cornflower);
 }
 
-.nav .logo {
+.header,
+.header-wrapper,
+.nav,
+.nav .list,
+.list .menu-nav,
+.address-header .list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.nav .logo.link {
   color: var(--iris);
   margin-right: 76px;
 }
@@ -80,14 +85,6 @@ header {
   color: var(--navyblue);
 }
 
-.link {
-  text-decoration: none;
-}
-
-.list .menu-nav {
-  gap: 40px;
-}
-
 .nav-link.link {
   color: var(--navyblue);
   padding: 24px 0;
@@ -95,15 +92,6 @@ header {
 
 .nav-link.link:hover,
 .nav-link.link:focus {
-  color: #404bbf;
-}
-
-.address-link {
-  color: var(--slate);
-}
-
-.address-link.link:hover,
-.address-link.link:focus {
   color: #404bbf;
 }
 
@@ -115,6 +103,18 @@ header {
   letter-spacing: 0.02em;
 }
 
+
+.address-link {
+  color: var(--slate);
+}
+
+.address-link.link:hover,
+.address-link.link:focus {
+  color: #404bbf;
+}
+
+
+
 .address-header {
   font-style: normal;
   font-size: 16px;
@@ -124,13 +124,12 @@ header {
   color: var(--slate);
 }
 
-.menu-nav,
-.address-header .list {
-  gap: 40px;
-}
-
 .list {
   list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /* main */
@@ -177,6 +176,12 @@ button {
   cursor: pointer;
 }
 
+.active-button {
+  background-color: #4d5ae5;
+  color: var(--white);
+  border: none;
+}
+
 button:hover,
 button:focus {
   background-color: #404bbf;
@@ -190,21 +195,10 @@ button:focus {
   display: flex;
   gap: 24px;
   min-width: 1128px;
-  width: calc((100% - 24px) / 4);
 }
 
 .traits .traits-specs {
-  width: calc((100% - 72px) / 4); 
-}
-
-.active-button {
-  background-color: #4d5ae5;
-  color: var(--white);
-  border: none;
-}
-
-.list {
-  list-style-type: none;
+  width: calc((100% - 72px) / 4);
 }
 
 .headers {
@@ -235,21 +229,16 @@ button:focus {
 
 .we-do {
   padding-bottom: 120px;
-
 }
 
-.we-do .list {
+.whatdo {
   display: flex;
   gap: 24px;
 }
 
-
-
 .images-we-do {
-  width: calc((100% - 48px) / 3); 
+  width: calc((100% - 48px) / 3);
 }
-
-
 
 .team-section {
   padding: 120px 0;
@@ -266,14 +255,15 @@ button:focus {
   color: var(--grey);
 }
 
-.team-section .list {
+.list.team-reps {
   display: flex;
   gap: 24px;
+  margin-top: 72px;
 }
 
 .team-card {
   width: calc((100% - 72px) / 4);
-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 }
 
@@ -301,6 +291,17 @@ border-radius: 0px 0px 4px 4px;
 }
 
 /*portfolio*/
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.list.button-set {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
 
 .button-portfolio {
   color: var(--iris);
@@ -322,37 +323,20 @@ border-radius: 0px 0px 4px 4px;
   border: 1px solid transparent;
 }
 
-.button-set {
+.list.portfolio-cards {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
-.button-set li:not(:last-child) {
-  margin-right: 24px;
-}
-
-.button-set li:last-child {
-  margin-right: 0;
-}
-
-.portfolio-cards {
-display: flex;
-flex-wrap: wrap;
-column-gap: 24px;
-row-gap: 48px; 
-
-}
-
-.portolio-card {
+.list .portolio-card {
   width: calc((100% - 48px) / 3);
-  border: 1px solid var(--cornflower);
 }
 
 .port-specs {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--cornflower);
   border-top: none;
 }
 
@@ -362,7 +346,6 @@ row-gap: 48px;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--grey);
   text-align: left;
   margin-bottom: 8px;
 }
@@ -379,7 +362,6 @@ row-gap: 48px;
 /* footer */
 .footer {
   padding: 100px 0;
-
   color: var(--cloud);
   background-color: var(--navyblue);
   font-size: 16px;
@@ -393,10 +375,9 @@ row-gap: 48px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
-    display: inline-block; 
+  display: inline-block;
   margin-bottom: 16px;
 }
-
 
 .logo-down {
   color: #f4f4fd;
@@ -405,12 +386,11 @@ row-gap: 48px;
 .footer-text {
   font-weight: 400;
   font-size: 16px;
-    line-height: 1.5;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud);
 }
 
 .footer .container {
   margin-left: 156px;
-  
 }
