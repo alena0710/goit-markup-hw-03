@@ -189,7 +189,6 @@ button:focus {
 .traits .list {
   display: flex;
   gap: 24px;
-  min-width: 1128px;
 }
 
 .traits-specifics {
