@@ -189,12 +189,18 @@ button:focus {
 .traits .list {
   display: flex;
   gap: 24px;
-  padding: 0;
-  margin: 0;
+
+padding-left: 0;
+
 }
 
 .traits-specifics {
   width: calc((100% - 72px) / 4); 
+}
+
+.traits .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .headers {
@@ -204,8 +210,8 @@ button:focus {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--grey);
-   padding: 0;
-  margin: 0;
+   margin-top: 0;
+
 }
 
 .subtitle {
@@ -213,12 +219,14 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
-   padding: 0;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
 }
 
 .header-do {
   margin-bottom: 72px;
+  margin-top: 0;
   letter-spacing: 0.02em;
   color: var(--grey);
   font-size: 36px;
@@ -234,6 +242,7 @@ button:focus {
 .whatdo {
   display: flex;
   gap: 24px;
+  padding-left: 0;
 }
 
 .images-we-do {
